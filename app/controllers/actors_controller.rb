@@ -9,5 +9,8 @@ class ActorsController < ApplicationController
     # Store the actor in the @actor instance variable so the view can format it
 
     # @actor = ???
+    the_id=params[:id]
+    id_hash=Actor.find_by({:id=>the_id})
+    @actor=id_hash
   end
 end
